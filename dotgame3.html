@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#rabit {
+  position: relative;
+  animation-duration: 10s;
+}
+
+@keyframes move-left {
+  from {left: 0px;}
+  to {left: -650px;}
+}
+
+@keyframes move-right {
+  from {left: 0px;}
+  to {left: 650px;}
+}
+
+@keyframes move-up {
+  from {top: 0px;}
+  to {top: -600px;}
+}
+
+@keyframes move-down {
+  from {top: 0px;}
+  to {top: 600px;}
+}
+</style>
+</head>
+<body>
+    <a Href="dotgame2.html"><input onclick="this.value='Stop'" type="button" value="Begin animation" id="start-button"></a><br><br><br><br><br><br><br><br><br>
+<center>
+<img id="rabit" src="https://payload.cargocollective.com/1/10/339592/14075299/RabbitRun_final.gif" alt="Not in folder" width="150" height="150"><br><br><br><br><br><br><br><br><br>
+</center>
+
+<button onclick="moveLeft()">Left</button>
+<button onclick="moveRight()">Right</button>
+<button onclick="moveUp()">Top</button>
+<button onclick="moveDown()">Bottom</button>
+<button onclick="stopAnimation()">Stop</button>
+
+<script>
+var elem = document.getElementById("rabit");
+
+function moveLeft() {
+  elem.style.animationName = "move-left";
+}
+
+function moveRight() {
+  elem.style.animationName = "move-right";
+}
+
+function moveUp() {
+  elem.style.animationName = "move-up";
+}
+
+function moveDown() {
+  elem.style.animationName = "move-down";
+}
+
+function stopAnimation() {
+    elem.style.animationPlayState = "paused";
+  }
+</script>
+
+</body>
+</html>
